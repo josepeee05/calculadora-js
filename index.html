@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles_noche.css">
+</head>
+<body id="fondo">
+    <section id="cont-general">
+        <label class="switch">
+            <input type="checkbox" onclick="oscuro()">
+            <span id="slider"></span>
+        </label>
+        <div id="cont-calculadora">
+            <div id="cont-escritura">
+                <input type="text" id="entrada" placeholder="0" >
+            </div>
+            <div id="cont-botones">
+                <!-- FILA 1 -->
+                <button id="ac" class="btn" onclick="borrarTodo()">AC</button>
+                <button id="borrar" class="btn" onclick="borrarUnDigito()">B</button>
+                <button id="porcentaje" class="btn" onclick="calcularPorcentaje()">%</button>
+                <button id="dividir" class="btn color" onclick="realizarOperacion('/')">/</button>
+                    <!-- FILA 2 -->
+                <button id="siete" class="btn" onclick="insertarNumero('7')">7</button>
+                <button id="ocho" class="btn" onclick="insertarNumero('8')">8</button>
+                <button id="nueve" class="btn" onclick="insertarNumero('9')">9</button>
+                <button id="multiplicar" class="btn color" onclick="realizarOperacion('*')">X</button>
+                <!-- FILA 3 -->
+                <button id="cuatro" class="btn" onclick="insertarNumero('4')">4</button>
+                <button id="cinco" class="btn" onclick="insertarNumero('5')">5</button>
+                <button id="seis" class="btn" onclick="insertarNumero('6')">6</button>
+                <button id="restar" class="btn color" onclick="realizarOperacion('-')">-</button>
+                <!-- FILA 4 -->
+                <button id="uno" class="btn" onclick="insertarNumero('1')">1</button>
+                <button id="dos" class="btn" onclick="insertarNumero('2')">2</button>
+                <button id="tres" class="btn" onclick="insertarNumero('3')">3</button>
+                <button id="sumar" class="btn color" onclick="realizarOperacion('+')">+</button>
+                <!-- FILA 5 -->
+                <button id="cero" class="btn doble" onclick="insertarNumero('0')">0</button>
+                <button id="punto" class="btn" onclick="insertarPunto()">.</button>
+                <button id="igual" class="btn color" onclick="calcularResultado()">=</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/calculadora.js"></script>
+</body>
+</html>
